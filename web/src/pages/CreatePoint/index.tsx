@@ -187,7 +187,7 @@ const CreatePoint = () => {
   return (
     <div id={darkMode === 'dark' ? "page-create-point-dark" : "page-create-point"}>
       <header>
-        <img src={darkMode ? logoDarkTheme : logo} alt="Ecoleta"/>
+        <img src={darkMode === 'dark'? logoDarkTheme : logo} alt="Ecoleta"/>
         <div className="theme-box">
           <Link to={{
               pathname:"/",

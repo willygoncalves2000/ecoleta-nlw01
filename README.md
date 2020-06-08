@@ -2,7 +2,8 @@
 Ecoleta is a project developed during Next Level Week, a free event offered by Rockeseat that aims to help developers reach the next level.
 
 ## :heavy_check_mark: Project
-![](https://github.com/willygoncalves2000/ecoleta-nlw01/blob/master/.github/home-web.svg)
+![](https://github.com/willygoncalves2000/ecoleta-nlw01/blob/master/.github/darkmode.gif)
+
 This application connects people to waste collection points, in order to contribute to the reduction of environmental impacts caused by 
 the bad destination of materials such as batteries, lamps, electronics, etc.
 

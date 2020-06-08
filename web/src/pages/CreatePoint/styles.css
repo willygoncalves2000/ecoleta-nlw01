@@ -1,19 +1,58 @@
-#page-create-point {
-  width: 100%;
-  max-width: 1100px;
 
+
+#page-create-point {
+  
+  width: 100%;
+  /* max-width: 1100px; */
+  padding: 0 120px;
+  padding-top: 48px;
   margin: 0 auto;
 }
 
-#page-create-point header {
-  margin-top: 48px;
+#page-create-point-dark {
+  height: 100%;
+  width: 100%;
+  /* max-width: 1100px; */
+  padding: 0 120px;
+  padding-top: 48px;
+  margin: 0 auto;
+  background: #020202;
+}
+#page-create-point-dark form h1, 
+#page-create-point-dark form h2 {
+  color: #F0F0F5
+}
 
+#page-create-point header,
+#page-create-point-dark header {
+  /* margin-top: 48px; */
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#page-create-point header a {
+#page-create-point header label,
+#page-create-point-dark header label {
+  margin-left: 20px;
+}
+
+#page-create-point header .theme-box {
+  display: flex;
+  align-items: center;
+}
+#page-create-point-dark header .theme-box {
+  display: flex;
+  align-items: center;
+  color: #F0F0F5
+  
+}
+#page-create-point-dark header .theme-box a {
+  color: #F0F0F5
+}
+
+#page-create-point header a,
+#page-create-point-dark header a {
   color: var(--title-color);
   font-weight: bold;
   text-decoration: none;
@@ -22,13 +61,15 @@
   align-items: center;
 }
 
-#page-create-point header a svg {
+#page-create-point header a svg,
+#page-create-point-dark header a svg {
   margin-right: 16px;
   color: var(--primary-color);
 }
 
 #page-create-point form {
   margin: 80px auto;
+  margin-bottom: 0;
   padding: 64px;
   max-width: 730px;
   background: #FFF;
@@ -37,18 +78,32 @@
   display: flex;
   flex-direction: column;
 }
+#page-create-point-dark form {
+  margin: 80px auto;
+  margin-bottom: 0;
+  padding: 64px;
+  max-width: 730px;
+  background: #000;
+  border-radius: 8px;
 
-#page-create-point form h1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#page-create-point form h1,
+#page-create-point-dark form h1 {
   font-size: 36px;
 }
 
-#page-create-point form fieldset {
+#page-create-point form fieldset,
+#page-create-point-dark form fieldset {
   margin-top: 64px;
   min-inline-size: auto;
   border: 0;
 }
 
-#page-create-point form legend {
+#page-create-point form legend,
+#page-create-point-dark form legend {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -56,22 +111,26 @@
   margin-bottom: 40px;
 }
 
-#page-create-point form legend h2 {
+#page-create-point form legend h2,
+#page-create-point-dark form legend h2{
   font-size: 24px;
 }
 
-#page-create-point form legend span {
+#page-create-point form legend span,
+#page-create-point-dark form legend span {
   font-size: 14px;
   font-weight: normal;
   color: var(--text-color);
 }
 
-#page-create-point form .field-group {
+#page-create-point form .field-group,
+#page-create-point-dark form .field-group {
   flex: 1;
   display: flex;
 }
 
-#page-create-point form .field {
+#page-create-point form .field,
+#page-create-point-dark form .field  {
   flex: 1;
 
   display: flex;
@@ -81,9 +140,20 @@
 
 #page-create-point form .field input[type=text],
 #page-create-point form .field input[type=email],
-#page-create-point form .field input[type=number] {
+#page-create-point form .field input[type=number]{
   flex: 1;
   background: #F0F0F5;
+  border-radius: 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: #6C6C80;
+}
+#page-create-point-dark form .field input[type=text],
+#page-create-point-dark form .field input[type=email],
+#page-create-point-dark form .field input[type=number]{
+  flex: 1;
+  background: #020202;
   border-radius: 8px;
   border: 0;
   padding: 16px 24px;
@@ -103,49 +173,71 @@
   font-size: 16px;
   color: #6C6C80;
 }
+#page-create-point-dark form .field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  flex: 1;
+  background: #020202;
+  border-radius: 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: #6C6C80;
+}
 
-#page-create-point form .field input::placeholder {
+#page-create-point form .field input::placeholder,
+#page-create-point-dark form .field input::placeholder {
   color: #A0A0B2;
 }
 
-#page-create-point form .field label {
+#page-create-point form .field label,
+#page-create-point-dark form .field label {
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-#page-create-point form .field :disabled {
+#page-create-point form .field :disabled,
+#page-create-point-dark form .field :disabled {
   cursor: not-allowed;
 }
 
-#page-create-point form .field-group .field + .field {
+#page-create-point form .field-group .field + .field ,
+#page-create-point-dark form .field-group .field + .field {
   margin-left: 24px;
 }
 
-#page-create-point form .field-group input + input {
+#page-create-point form .field-group input + input,
+#page-create-point-dark form .field-group input + input {
   margin-left: 24px;
 }
 
-#page-create-point form .field-check {
+#page-create-point form .field-check ,
+#page-create-point-dark form .field-check {
   flex-direction: row;
   align-items: center;
 }
 
-#page-create-point form .field-check input[type=checkbox] {
+#page-create-point form .field-check input[type=checkbox],
+#page-create-point-dark form .field-check input[type=checkbox] {
   background: #F0F0F5;
 }
 
-#page-create-point form .field-check label {
+#page-create-point form .field-check label,
+#page-create-point-dark form .field-check label {
   margin: 0 0 0 8px;
 }
 
-#page-create-point form .leaflet-container {
+#page-create-point form .leaflet-container,
+#page-create-point-dark form .leaflet-container {
   width: 100%;
   height: 350px;
   border-radius: 8px;
   margin-bottom: 24px;
 }
 
-#page-create-point form button {
+#page-create-point form button,
+#page-create-point-dark form button {
   width: 260px;
   height: 56px;
   background: var(--primary-color);
@@ -160,7 +252,8 @@
   cursor: pointer;
 }
 
-#page-create-point form button:hover {
+#page-create-point form button:hover,
+#page-create-point-dark form button:hover {
   background: #2FB86E;
 }
 
@@ -171,8 +264,25 @@
   list-style: none;
 }
 
-.items-grid li {
+.items-grid li{
   background: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  height: 180px;
+  border-radius: 8px;
+  padding: 32px 24px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: center;
+
+  cursor: pointer;
+} 
+
+#page-create-point-dark .items-grid li{
+  background: #020202;
   border: 2px solid #f5f5f5;
   height: 180px;
   border-radius: 8px;
@@ -196,8 +306,20 @@
   align-items: center;
   color: var(--title-color)
 }
+#page-create-point-dark .items-grid li span {
+  flex: 1;
+  margin-top: 12px;
+
+  display: flex;
+  align-items: center;
+  color: #F0F0F5
+}
 
 .items-grid li.selected {
   background: #E1FAEC;
+  border: 2px solid #34CB79;
+}
+#page-create-point-dark .items-grid li.selected {
+  background: #020202;
   border: 2px solid #34CB79;
 }

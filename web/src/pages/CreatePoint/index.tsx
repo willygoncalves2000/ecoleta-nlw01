@@ -6,11 +6,16 @@ import api from '../../services/api';
 import axios from 'axios';
 import { LeafletMouseEvent }from 'leaflet';
 
+import usePersistedState from '../../utils/usePersistedState';
+
+import { Switch } from '@material-ui/core';
+
 import Dropzone from '../../components/Dropzone';
 
 import './styles.css';
 
 import logo from '../../assets/logo.svg';
+import logoDarkTheme from '../../assets/logoDarkTheme.svg';
 
 
 // state com array ou objeto: é preciso manualmente informar o tipo da variável armazenada
@@ -43,6 +48,10 @@ const CreatePoint = () => {
     email: '',
     whatsapp: '',
   });
+
+
+  const [darkMode, setDarkMode] = usePersistedState('theme', 'light');
+
 
   // Armazenar o UF e a Cidade selecionada pelo usuario, para fazer o cadastro do Ponto de Coleta
   const [selectedUf, setSelectedUf] = useState('0');
@@ -77,7 +86,6 @@ const CreatePoint = () => {
         setUfs(ufInitials);
       });
   }, []);
-
 
   // Busca as cidades do estado (UF) selecionado
   useEffect(() => {
@@ -170,15 +178,33 @@ const CreatePoint = () => {
     history.push('/');
   }
 
-  return (
-    <div id="page-create-point">
-      <header>
-        <img src={logo} alt="Ecoleta"/>
 
-        <Link to="/">
-          <FiArrowLeft />
-          Voltar para home
-        </Link>
+  
+  function handleChange (event: ChangeEvent<HTMLInputElement>) {
+    setDarkMode(darkMode === 'light' ? 'dark' : 'light');
+  }
+
+  return (
+    <div id={darkMode === 'dark' ? "page-create-point-dark" : "page-create-point"}>
+      <header>
+        <img src={darkMode ? logoDarkTheme : logo} alt="Ecoleta"/>
+        <div className="theme-box">
+          <Link to={{
+              pathname:"/",
+              state: {darkMode}     
+            }}>
+            <FiArrowLeft />
+              Voltar para home
+            </Link>
+          <label>Dark Mode:</label>
+          <Switch
+            color="primary"
+            onChange={handleChange}
+            checked={darkMode === 'dark' ? true : false}
+          />
+
+        </div>
+
       </header>
 
       <form onSubmit={handlerSubmit}>
